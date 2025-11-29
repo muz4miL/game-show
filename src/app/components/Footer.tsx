@@ -23,7 +23,7 @@ export default function Footer() {
                             priority
                         />
                         <span className="ml-2 text-2xl font-extrabold tracking-wider text-[#F5E0A9]">
-                            GameShow
+                            GameChanger
                         </span>
                     </Link>
                     <p className="mt-4 text-sm text-gray-400 leading-relaxed">

@@ -107,7 +107,7 @@ export default function AboutPage() {
                             },
                             {
                                 year: "2023",
-                                text: "Parent company of this Game Show, inspiring communities worldwide.",
+                                text: "Parent company of this Game Changer, inspiring communities worldwide.",
                             },
                         ].map((item, i) => (
                             <motion.div

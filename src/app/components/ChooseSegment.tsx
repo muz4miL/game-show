@@ -70,7 +70,7 @@ export default function ChooseSegments() {
                     transition={{ duration: 1, delay: 0.3 }}
                     className="mt-4 text-center text-gray-300 max-w-3xl mx-auto"
                 >
-                    Register for the Game Show to participate and automatically unlock
+                    Register for the Game Changer to participate and automatically unlock
                     exclusive benefits like lucky draws, travel, and business opportunities.
                 </motion.p>
 
@@ -122,7 +122,7 @@ export default function ChooseSegments() {
                     >
                         <Gamepad2 className="w-12 h-12 mx-auto text-[#D4AF37]" />
                         <h3 className="mt-4 text-2xl font-bold bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent">
-                            Game Show
+                            Game Changer
                         </h3>
                         <p className="mt-3 text-gray-200 text-base">
                             The main event — register now to join KPK’s biggest live show. By
@@ -131,7 +131,7 @@ export default function ChooseSegments() {
 
                         <Link href="/register?segment=game-show">
                             <button className="mt-6 px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-bold rounded-xl shadow-lg transition duration-300">
-                                Register for Game Show
+                                Register for Game Changer
                             </button>
                         </Link>
                     </motion.div>

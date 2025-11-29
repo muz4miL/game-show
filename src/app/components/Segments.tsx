@@ -2,45 +2,50 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Users, Award, Crown } from "lucide-react";
+import { Users, Award, Crown, MicVocal, BriefcaseBusiness,  HandCoins } from "lucide-react";
 
 const levels = [
     {
-        name: "Silver Level",
-        requirement: "Refer 10 Friends",
+        name: "Stylish Segment",
         benefits: [
-            "Exclusive Silver Badge",
-            "1 Extra Lucky Draw Entry",
-            "Priority Seating in Events",
+            "Fashion ",
+            "Singing",
+            "Dramas",
+            "Theatre Show",
+            "Lucky Draw Entry",
         ],
-        icon: Users,
-        color: "from-gray-500/30 to-gray-800/50",
+        icon: MicVocal,
+        color: "from-purple-500/30 to-gray-800/50",
     },
     {
-        name: "Gold Level",
-        requirement: "Refer 20 Friends",
+        name: "Jobs Segment",
+        
         benefits: [
-            "All Silver Benefits",
-            "3 Extra Lucky Draw Entries",
-            "Special Shout-out on Stage",
+            "General Managers",
+            "Managers",
+            "Executives",
+            "Broakership",
+            "Lucky Draw Entry",
         ],
-        icon: Award,
-        color: "from-yellow-400/30 to-yellow-800/50",
+        icon: BriefcaseBusiness,
+        color: "from-blue-400/30 to-green-800/50",
     },
     {
-        name: "Platinum Level",
-        requirement: "Refer 30 Friends",
+        name: "Professional Segment",
+        
         benefits: [
-            "All Gold Benefits",
-            "VIP Access at the Game Show",
-            "Meet & Greet with Hosts",
+            "Entrepreneurship",
+            "Networking",
+            "Financial services",
+            "Advisories and Trainings",
+            "Lucky Draw Entry",
         ],
-        icon: Crown,
-        color: "from-purple-500/30 to-purple-900/50",
+        icon:  HandCoins,
+        color: "from-green-400/30 to-yellow-400/20",
     },
 ];
 
-export default function GameShowLevels() {
+export default function Segments() {
     return (
         <section className="relative py-20 bg-gradient-to-br from-gray-900 via-black to-yellow-950 text-white">
             <div className="absolute inset-0 bg-black/50"></div>
@@ -52,12 +57,11 @@ export default function GameShowLevels() {
                     transition={{ duration: 0.8 }}
                     className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent drop-shadow-xl"
                 >
-                    Game Changer Referral Levels
+                    Game Changer Main Segments
                 </motion.h2>
 
                 <p className="mt-4 text-center text-gray-300 max-w-3xl mx-auto">
-                    Invite your friends to the Game Changer! The more people you bring, the
-                    higher your level and the more chances you get to win big.
+                    Register now in any of the segments and enjoy exclusive free benefits — including a guaranteed entry into our Lucky Draw!
                 </p>
 
                 {/* Cards Grid */}
@@ -82,18 +86,24 @@ export default function GameShowLevels() {
                                 <h3 className="mt-6 text-2xl font-bold text-center text-yellow-300">
                                     {level.name}
                                 </h3>
-                                <p className="mt-2 text-center text-gray-200 font-medium">
-                                    {level.requirement}
-                                </p>
-                                <ul className="mt-6 space-y-2 text-gray-300 text-sm">
+                               
+                                <ul className="mt-6 space-y-2 text-gray-300 font-bold text-sm">
                                     {level.benefits.map((benefit, i) => (
                                         <li key={i} className="flex items-center gap-2">
-                                            <span className="text-yellow-400">✔</span>
+                                            <span className="text-yellow-400 ">✔</span>
                                             {benefit}
                                         </li>
                                     ))}
                                 </ul>
-                                
+                                <div className="mt-6 flex justify-center">
+                                    <Link href="/registerSegment">
+                                        <button className="px-6 py-3 bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] 
+                      text-gray-900 font-semibold rounded-xl shadow-lg hover:scale-105 
+                      transition-transform duration-300">
+                                            Register Now
+                                        </button>
+                                    </Link>
+                                </div>
                             </motion.div>
                         );
                     })}

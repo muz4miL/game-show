@@ -24,7 +24,7 @@ export default function Hero() {
                         <span className="whitespace-nowrap bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent">
                             Participate in KPK’s Biggest
                         </span>
-                        <span className="block text-white">Game Show</span>
+                        <span className="block text-white">Game Changer</span>
                     </motion.h1>
 
 

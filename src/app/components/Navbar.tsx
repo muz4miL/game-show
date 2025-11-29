@@ -46,7 +46,7 @@ export default function Navbar() {
                         priority
                     />
                     <span className="ml-2 text-2xl font-extrabold tracking-wider text-[#F5E0A9]">
-                        GameShow
+                        GameChanger
                     </span>
                 </Link>
 
@@ -55,6 +55,9 @@ export default function Navbar() {
                     {/* <Link href="/segments/jobs" className="hover:text-yellow-400 transition">
                         Jobs
                     </Link> */}
+                    <Link href="/" className="hover:text-yellow-400 transition">
+                        Home
+                    </Link>
                     <Link href="/#segments" className="hover:text-yellow-400 transition">
                         Segments
                     </Link>
@@ -94,6 +97,9 @@ export default function Navbar() {
             {/* Mobile Menu */}
             {open && (
                 <div className="md:hidden flex flex-col bg-gray-900 px-6 py-4 gap-4 border-t border-yellow-500/30">
+                    <Link href="/" className="hover:text-yellow-400" onClick={() => setOpen(false)}>
+                        Home 
+                    </Link>
                     <Link href="/segments/jobs" className="hover:text-yellow-400" onClick={() => setOpen(false)}>
                         Jobs
                     </Link>

@@ -95,7 +95,7 @@ export default function AboutPage() {
                             { year: "1971", text: "Foundation of Shamroz Group of Companies with a vision for progress." },
                             { year: "1985", text: "Expansion into multiple industries, earning trust nationwide." },
                             { year: "2000", text: "Adoption of modern practices and global partnerships." },
-                            { year: "2023", text: "Parent company of this Game Show, inspiring communities worldwide." },
+                            { year: "2023", text: "Parent company of this Game Changer, inspiring communities worldwide." },
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
