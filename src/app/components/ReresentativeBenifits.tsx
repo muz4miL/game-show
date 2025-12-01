@@ -61,43 +61,51 @@ export default function GameShowLevels() {
                 </p>
 
                 {/* Cards Grid */}
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
-                    {levels.map((level, idx) => {
-                        const Icon = level.icon;
-                        return (
-                            <motion.div
-                                key={level.name}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                                className={`p-8 rounded-2xl shadow-xl border border-yellow-500/30 
-                bg-gradient-to-br ${level.color} hover:border-yellow-400 transition`}
-                            >
-                                <div className="flex justify-center">
-                                    <div className="p-4 rounded-full bg-yellow-600/20">
-                                        <Icon className="w-10 h-10 text-yellow-400" />
-                                    </div>
-                                </div>
-                                <h3 className="mt-6 text-2xl font-bold text-center text-yellow-300">
-                                    {level.name}
-                                </h3>
-                                <p className="mt-2 text-center text-gray-200 font-medium">
-                                    {level.requirement}
-                                </p>
-                                <ul className="mt-6 space-y-2 text-gray-300 text-sm">
-                                    {level.benefits.map((benefit, i) => (
-                                        <li key={i} className="flex items-center gap-2">
-                                            <span className="text-yellow-400">✔</span>
-                                            {benefit}
-                                        </li>
-                                    ))}
-                                </ul>
-                                
-                            </motion.div>
-                        );
-                    })}
-                </div>
+       {/* Cards Grid */}
+<div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+  {levels.map((level, idx) => (
+    <motion.div
+      key={level.name}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: idx * 0.2 }}
+      className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_0_35px_rgba(212,175,55,0.6)] transition-all duration-500 group transform hover:scale-105"
+    >
+      {/* Background Image / Gradient */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-tr ${level.color} opacity-60`}
+      ></div>
+
+      {/* Bottom overlay */}
+      <div className="relative z-10 bg-gradient-to-t from-black/80 via-black/60 to-transparent rounded-t-3xl p-8 pt-20">
+        <h3 className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-2 drop-shadow-md text-center">
+          {level.name}
+        </h3>
+        <p className="text-gray-200 text-center font-medium mb-4">
+          {level.requirement}
+        </p>
+
+        <ul className="text-gray-200 text-sm sm:text-base space-y-2 max-h-48 overflow-y-auto pr-2">
+          {level.benefits.map((benefit, i) => (
+            <li key={i} className="flex items-center gap-2">
+              <span className="text-yellow-400">✔</span> {benefit}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-6 flex justify-center">
+          <Link href="/registerSegment" className="w-full">
+            <button className="w-full px-6 py-3 bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] text-gray-900 font-semibold rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+              Register Now
+            </button>
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
             </div>
         </section>
     );
