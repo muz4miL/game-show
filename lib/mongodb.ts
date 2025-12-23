@@ -1,14 +1,19 @@
 import mongoose from "mongoose";
 
-const MONGO_URI = process.env.MONGO_URI as string;
+const MONGO_URI = process.env.MONGO_URI || "";
 
-if (!MONGO_URI) {
-    throw new Error("Please add your Mongo URI to .env.local");
-}
-
+// Only throw error at runtime, not during build
 let cached = (global as any).mongoose || { conn: null, promise: null };
 
 export async function connectDB() {
+    // Check if we're in build time (no MONGO_URI needed)
+    if (!MONGO_URI) {
+        if (process.env.NODE_ENV === 'production') {
+            console.warn("MongoDB URI not configured. Database features will be unavailable.");
+        }
+        return null;
+    }
+
     if (cached.conn) return cached.conn;
 
     if (!cached.promise) {
