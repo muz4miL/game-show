@@ -36,10 +36,10 @@ export default function Hero() {
                         className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-xl"
                     >
                         <span className="bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent">
-                            Participate in KPK’s Biggest
+                            Unlock Your Future with
                         </span>
 
-                        <span className="block text-white mt-1">Game Changer</span>
+                        <span className="block text-white mt-1">ADH Associates</span>
                     </motion.h1>
 
                     {/* DESCRIPTION */}
@@ -64,7 +64,7 @@ export default function Hero() {
                         className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
                     >
                         <Link href="/register" className="w-full sm:w-auto">
-                            <Button className="bg-yellow-500 cursor-pointer text-black hover:bg-yellow-400 shadow-xl w-full">
+                            <Button className="bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] cursor-pointer text-black font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full py-4 px-8">
                                 Register Now
                             </Button>
                         </Link>
@@ -82,7 +82,7 @@ export default function Hero() {
                         className="grid grid-cols-3 gap-6 pt-8 max-w-xs sm:max-w-sm"
                     >
                         {[
-                            { number: "1000+", label: "Participants" },
+                            { number: "2000+", label: "Participants" },
                             { number: "14", label: "Segments" },
                             { number: "24/7", label: "Support" },
                         ].map((item, index) => (

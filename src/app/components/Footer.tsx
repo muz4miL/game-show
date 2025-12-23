@@ -2,82 +2,168 @@ import SocialLinks from "./socialLinks";
 import Image from "next/image";
 import logo from "../assets/logo.png";
 import Link from "next/link";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="relative bg-gradient-to-b from-gray-950 via-black to-yellow-950 text-gray-300 px-6 md:px-16 lg:px-24 xl:px-32 w-full overflow-hidden">
-            {/* Glowing background accents */}
+        <footer className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-black text-gray-300 overflow-hidden">
+            {/* Premium Background Effects */}
             <div className="absolute inset-0">
-                <div className="absolute -top-20 -left-20 w-72 h-72 bg-[#F5E0A9]/10 blur-3xl rounded-full"></div>
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D4AF37]/10 blur-3xl rounded-full"></div>
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#F5E0A9]/5 blur-[120px] rounded-full"></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#D4AF37]/5 blur-[120px] rounded-full"></div>
             </div>
 
-            <div className="relative z-10 flex flex-col md:flex-row md:items-start justify-between gap-12 py-16 border-b border-[#D4AF37]/20">
-                {/* Logo & Tagline */}
-                <div className="flex-1">
-                    <Link href="/" className="flex items-center">
-                        <Image
-                            src={logo}
-                            alt="Logo"
-                            className="h-20 w-auto object-contain"
-                            priority
-                        />
-                        <span className="ml-2 text-2xl font-extrabold tracking-wider text-[#F5E0A9]">
-                            Game Changer
-                        </span>
-                    </Link>
-                    <p className="mt-4 text-sm text-gray-400 leading-relaxed">
-                        Level up your career, win big in events, and unlock global
-                        opportunities — all in one place.
-                    </p>
+            {/* Decorative Top Border */}
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent"></div>
 
-                    {/* Social Icons */}
-                    <div className="mt-6">
-                        <SocialLinks />
+            <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+                {/* Main Footer Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 py-16 md:py-20">
+
+                    {/* Company Info Section - Takes more space */}
+                    <div className="lg:col-span-5 space-y-6">
+                        <Link href="/" className="inline-flex items-center group">
+                            <div className="relative">
+                                <div className="absolute inset-0 bg-[#F5E0A9]/20 blur-xl rounded-full group-hover:bg-[#F5E0A9]/30 transition-all duration-300"></div>
+                                <Image
+                                    src={logo}
+                                    alt="ADH Associates Logo"
+                                    className="h-16 w-auto object-contain relative z-10"
+                                    priority
+                                />
+                            </div>
+                            <span className="ml-3 text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent">
+                                ADH Associates
+                            </span>
+                        </Link>
+
+                        <p className="text-base text-gray-400 leading-relaxed max-w-md">
+                            Empowering careers, creating opportunities, and connecting talent with global possibilities. Your success journey starts here.
+                        </p>
+
+                        {/* Social Media - Premium Style */}
+                        <div className="pt-2">
+                            <p className="text-sm font-semibold text-[#F5E0A9] mb-3">Connect With Us</p>
+                            <SocialLinks />
+                        </div>
                     </div>
-                </div>
 
-                {/* Quick Links */}
-                <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4 text-[#F5E0A9]">Contact Details</h3>
-                        <address className="not-italic space-y-2 text-sm">
-                            <p className="text-gray-300">123 Main Street, Islamabad, Pakistan</p>
-                            <a href="tel:+923001234567" className="block hover:text-[#D4AF37] transition">
-                                +92 300 1234567
-                            </a>
-                            <a href="mailto:info@example.com" className="block hover:text-[#D4AF37] transition">
-                                info@example.com
-                            </a>
+                    {/* Quick Links Section */}
+                    <div className="lg:col-span-2">
+                        <h3 className="text-lg font-bold text-white mb-6 relative inline-block">
+                            Opportunities
+                            <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#F5E0A9] to-transparent"></div>
+                        </h3>
+                        <ul className="space-y-3">
+                            {[
+                                { name: "Jobs in Pakistan", href: "/segments/jobs" },
+                                { name: "Jobs Abroad", href: "/segments/jobs" },
+                                { name: "Invest Abroad", href: "/segments/investment-abroad" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link
+                                        href={item.href}
+                                        className="text-gray-400 hover:text-[#F5E0A9] transition-all duration-300 flex items-center gap-2 group"
+                                    >
+                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                                        <span>{item.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Company Section */}
+                    <div className="lg:col-span-2">
+                        <h3 className="text-lg font-bold text-white mb-6 relative inline-block">
+                            Company
+                            <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#F5E0A9] to-transparent"></div>
+                        </h3>
+                        <ul className="space-y-3">
+                            {[
+                                { name: "About Us", href: "/about" },
+                                { name: "Contact", href: "/contact" },
+                                { name: "Privacy Policy", href: "/privacy" },
+                                { name: "Terms of Service", href: "/terms" },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link
+                                        href={item.href}
+                                        className="text-gray-400 hover:text-[#F5E0A9] transition-all duration-300 flex items-center gap-2 group"
+                                    >
+                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                                        <span>{item.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Information - Enhanced */}
+                    <div className="lg:col-span-3">
+                        <h3 className="text-lg font-bold text-white mb-6 relative inline-block">
+                            Get In Touch
+                            <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#F5E0A9] to-transparent"></div>
+                        </h3>
+                        <address className="not-italic space-y-4">
+                            {/* Address */}
+                            <div className="flex items-start gap-3 group">
+                                <div className="mt-1 p-2 rounded-lg bg-[#F5E0A9]/10 group-hover:bg-[#F5E0A9]/20 transition-all duration-300">
+                                    <MapPin className="w-4 h-4 text-[#F5E0A9]" />
+                                </div>
+                                <div className="flex-1">
+                                    <p className="text-sm text-gray-400 leading-relaxed">
+                                        Suit # 01, First Floor<br />
+                                        Burj Al Bilal Plaza<br />
+                                        Jinnah Avenue, Margallah Enclave DHA/CDA<br />
+                                        Main Double Road, Islamabad
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Phone Numbers */}
+                            <div className="flex items-start gap-3 group">
+                                <div className="mt-1 p-2 rounded-lg bg-[#F5E0A9]/10 group-hover:bg-[#F5E0A9]/20 transition-all duration-300">
+                                    <Phone className="w-4 h-4 text-[#F5E0A9]" />
+                                </div>
+                                <div className="flex-1 space-y-1">
+                                    <a href="tel:+923005885527" className="block text-sm text-gray-400 hover:text-[#F5E0A9] transition-colors duration-300">
+                                        +92 300 5885527
+                                    </a>
+                                    <a href="tel:+923055833371" className="block text-sm text-gray-400 hover:text-[#F5E0A9] transition-colors duration-300">
+                                        +92 305 5833371
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Email */}
+                            <div className="flex items-start gap-3 group">
+                                <div className="mt-1 p-2 rounded-lg bg-[#F5E0A9]/10 group-hover:bg-[#F5E0A9]/20 transition-all duration-300">
+                                    <Mail className="w-4 h-4 text-[#F5E0A9]" />
+                                </div>
+                                <div className="flex-1">
+                                    <a href="mailto:aamrae2022@gmail.com" className="block text-sm text-gray-400 hover:text-[#F5E0A9] transition-colors duration-300 break-all">
+                                        aamrae2022@gmail.com
+                                    </a>
+                                </div>
+                            </div>
                         </address>
                     </div>
+                </div>
 
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4 text-[#F5E0A9]">Opportunities</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li><Link href="/segments/jobs" className="hover:text-[#D4AF37] transition">Job in Pakistan</Link></li>
-                            <li><Link href="/segments/jobs" className="hover:text-[#D4AF37] transition">Job Abroad</Link></li>
-                            <li><Link href="/segments/investment-abroad" className="hover:text-[#D4AF37] transition">Invest Abroad</Link></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4 text-[#F5E0A9]">Support</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li><Link href="/contact" className="hover:text-[#D4AF37] transition">Contact Us</Link></li>
-                            <li><Link href="/privacy" className="hover:text-[#D4AF37] transition">Privacy Policy</Link></li>
-                            <li><Link href="/terms" className="hover:text-[#D4AF37] transition">Terms of Service</Link></li>
-                        </ul>
+                {/* Bottom Bar */}
+                <div className="border-t border-gray-800/50 py-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-sm text-gray-500">
+                            © {new Date().getFullYear()} <span className="text-[#F5E0A9] font-semibold">ADH Associates</span>. All Rights Reserved.
+                        </p>
+                        <div className="flex items-center gap-1 text-xs text-gray-600">
+                            <span>Crafted with</span>
+                            <span className="text-[#D4AF37] animate-pulse">♦</span>
+                            <span>in Islamabad</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
-            {/* Bottom bar */}
-            <div className="relative z-10 py-6 text-center">
-                <p className="text-xs md:text-sm text-gray-500">
-                    © {new Date().getFullYear()} GameShow. All Rights Reserved.
-                </p>
             </div>
         </footer>
     );

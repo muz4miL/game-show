@@ -3,6 +3,11 @@ import { ReactNode } from "react";
 import Navbar from "../app/components/Navbar";
 import Footer from "./components/Footer";
 
+export const metadata = {
+  title: "ADH Associates - Career Opportunities & Events",
+  description: "Level up your career, win big in events, and unlock global opportunities with ADH Associates.",
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">

@@ -46,7 +46,7 @@ export default function Navbar() {
                         priority
                     />
                     <span className="ml-2 text-2xl font-extrabold tracking-wider text-[#F5E0A9]">
-                        Game Changer
+                        ADH Associates
                     </span>
                 </Link>
 
@@ -98,7 +98,7 @@ export default function Navbar() {
             {open && (
                 <div className="md:hidden flex flex-col bg-gray-900 px-6 py-4 gap-4 border-t border-yellow-500/30">
                     <Link href="/" className="hover:text-yellow-400" onClick={() => setOpen(false)}>
-                        Home 
+                        Home
                     </Link>
                     <Link href="/segments/jobs" className="hover:text-yellow-400" onClick={() => setOpen(false)}>
                         Jobs
