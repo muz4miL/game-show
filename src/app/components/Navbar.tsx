@@ -46,7 +46,7 @@ export default function Navbar() {
                         priority
                     />
                     <span className="ml-2 text-2xl font-extrabold tracking-wider text-[#F5E0A9]">
-                        ADH Associates
+                        Game Changer
                     </span>
                 </Link>
 

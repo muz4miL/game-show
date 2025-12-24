@@ -4,8 +4,8 @@ import Navbar from "../app/components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "ADH Associates - Career Opportunities & Events",
-  description: "Level up your career, win big in events, and unlock global opportunities with ADH Associates.",
+  title: "Game Changer - Career Opportunities & Events",
+  description: "Level up your career, win big in events, and unlock global opportunities with Game Changer.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

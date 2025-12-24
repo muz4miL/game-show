@@ -33,7 +33,7 @@ export default function Footer() {
                                 />
                             </div>
                             <span className="ml-3 text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent">
-                                ADH Associates
+                                Game Changer
                             </span>
                         </Link>
 
@@ -155,7 +155,7 @@ export default function Footer() {
                 <div className="border-t border-gray-800/50 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-sm text-gray-500">
-                            © {new Date().getFullYear()} <span className="text-[#F5E0A9] font-semibold">ADH Associates</span>. All Rights Reserved.
+                            © {new Date().getFullYear()} <span className="text-[#F5E0A9] font-semibold">Game Changer</span>. All Rights Reserved.
                         </p>
                         <div className="flex items-center gap-1 text-xs text-gray-600">
                             <span>Crafted with</span>

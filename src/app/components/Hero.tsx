@@ -36,10 +36,10 @@ export default function Hero() {
                         className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-xl"
                     >
                         <span className="bg-gradient-to-r from-[#F5E0A9] to-[#D4AF37] bg-clip-text text-transparent">
-                            Unlock Your Future with
+                            Participate in KPK's Biggest
                         </span>
 
-                        <span className="block text-white mt-1">ADH Associates</span>
+                        <span className="block text-white mt-1">Game Changer</span>
                     </motion.h1>
 
                     {/* DESCRIPTION */}
