@@ -106,7 +106,7 @@ export default function Hero() {
                 >
                     <div className="relative">
                         <Image
-                            src="/finalbgimage.png"
+                            src="/finalbgimage.png?v=2"
                             alt="Hero Image"
                             width={550}
                             height={550}
