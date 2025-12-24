@@ -3,11 +3,6 @@ import { ReactNode } from "react";
 import Navbar from "../app/components/Navbar";
 import Footer from "./components/Footer";
 
-export const metadata = {
-  title: "Game Changer - Career Opportunities & Events",
-  description: "Level up your career, win big in events, and unlock global opportunities with Game Changer.",
-};
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">

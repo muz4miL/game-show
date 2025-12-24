@@ -4,7 +4,8 @@ import Link from "next/link";
 import Button from "./Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import finalbgimage from "../assets/finalbg-image.png";
+
+
 
 
 export default function Hero() {
@@ -105,8 +106,10 @@ export default function Hero() {
                 >
                     <div className="relative">
                         <Image
-                            src={finalbgimage}
+                            src="/finalbgimage.png"
                             alt="Hero Image"
+                            width={550}
+                            height={550}
                             className="w-64 sm:w-80 md:w-[450px] lg:w-[550px] object-contain drop-shadow-2xl"
                             priority
                         />

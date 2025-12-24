@@ -137,12 +137,12 @@ export default function Footer() {
                             </div>
 
                             {/* Email */}
-                            <div className="flex items-start gap-3 group">
-                                <div className="mt-1 p-2 rounded-lg bg-[#F5E0A9]/10 group-hover:bg-[#F5E0A9]/20 transition-all duration-300">
+                            <div className="flex items-center gap-3 group">
+                                <div className="p-2 rounded-lg bg-[#F5E0A9]/10 group-hover:bg-[#F5E0A9]/20 transition-all duration-300">
                                     <Mail className="w-4 h-4 text-[#F5E0A9]" />
                                 </div>
                                 <div className="flex-1">
-                                    <a href="mailto:aamrae2022@gmail.com" className="block text-sm text-gray-400 hover:text-[#F5E0A9] transition-colors duration-300 break-all">
+                                    <a href="mailto:aamrae2022@gmail.com" className="text-sm text-gray-400 hover:text-[#F5E0A9] transition-colors duration-300">
                                         aamrae2022@gmail.com
                                     </a>
                                 </div>
